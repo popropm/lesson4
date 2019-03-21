@@ -58,10 +58,10 @@ Form.prototype.validate = function (myIds, myTypes) {
         }
 
         if (field.value.search(reg) == -1) {
-            field.style.borderColor = '#c750ac';
+            field.style.borderColor = '#6a67c7';
             message.innerHTML = 'Проверьте правильность заполнения поля!';
         } else {
-            field.style.borderColor = '#85c799';
+            field.style.borderColor = '#c7abc1';
             message.innerHTML = '';
         }
 

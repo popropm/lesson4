@@ -46,29 +46,10 @@ GoodsList.sumAllItem = function () {
 const list = new GoodsList();
 list.fetchGoods();
 
-window.onload = function() {
-    let mySampleString = 'to be or not to be, can\'t \'what\' is the question'
-    alert(KavichkiReplace.sampleStringReplace(mySampleString));
-}
-
-function KavichkiReplace(sampleString, patternMatch, patternReplace) {
-    let sampleStringResult = sampleString.replace(patternMatch, patternReplace);
-    return sampleStringResult;
-}
-
-let patternMatch = /\s\'/g,
-    patternReplace = ' "',
-    sampleString = "to be or not to be, can't 'what' is the question",
-    sampleStringResult = KavichkiReplace(sampleString, patternMatch, patternReplace);
-
-sampleString = sampleStringResult;
-patternMatch = /\'\s/g;
-patternReplace = '" ';
-
-sampleStringResult = KavichkiReplace(sampleString, patternMatch, patternReplace);
-
-alert('вот что стало:  ' + sampleStringResult);
-
+//  Task1/2;
+let str = string.innerHTML;
+const regexp = /([^\wа-я])'(.+?)'([^\wа-я])/ig;
+document.write(str.replace(regexp, '$1"$2"$3'));
 
 
 function makeGetRequest(url){
