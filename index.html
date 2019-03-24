@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eShop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/Basket.js"></script>
+    <script src="js/form.js" ></script>
+    <script src="js/Good.js"></script>
+    <script src="js/ltem.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <header>
+        <button class="cart-button" v-on:click="visibleBasket">Корзина</button>
+        <label> Поиск: <input v-model="filter" type="text" title="search" v-on:input="search"></label>
+    </header>
+    <main>
+        <div class="goods-list"></div>
+    </main>
+    <div id="basket" v-bind:style="isVisibleCart">
+        <div id="itemsPool">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="wrapper">
+    <form id="form" class="form">
+        <div class="form__header">Заполните форму обратной связи</div>
+        <input id="form__input-name" class="form__input" name="name" placeholder="Имя..." type="text" required/>
+        <div id="form__message-name" class="form__message"></div>
+        <input id="form__input-phone" class="form__input" name="phone" placeholder="Номер телефона..." type="text"
+               required/>
+        <div id="form__message-phone" class="form__message"></div>
+        <input id="form__input-email" class="form__input" name="emailaddress" placeholder="E-mail..." type="text"
+               required/>
+        <div id="form__message-email" class="form__message"></div>
+        <textarea id="form__text" name="text" class="form__text" rows="20" cols="40" placeholder="Текст..."></textarea>
+        <input id="form__button-clear" class="form__button form__button-clear" name="reset" type="reset" value="Сброс"/>
+        <input id="form__button-submit" class="form__button" name="submit" type="submit" value="Отправить"/></form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</body>
+</html>
